@@ -1,0 +1,11 @@
+{
+  "compilerOptions": {
+    "target": "esnext",
+    "module": "preserve",
+    "rootDir": "src",
+    "outDir": "tmp",
+    "types": [],
+  },
+  "include": ["src"],
+  "exclude": ["src/vendor"]
+}

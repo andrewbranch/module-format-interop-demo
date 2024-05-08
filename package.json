@@ -1,0 +1,26 @@
+{
+  "name": "module-format-interop-demo",
+  "version": "1.0.0",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "esbuild-ts": "esbuild --bundle src/index.ts --outfile=dist/index.js && node dist/index.js",
+    "esbuild-js": "esbuild --bundle src/index.js --outfile=dist/index.js && node dist/index.js",
+    "webpack-ts": "webpack --config webpack.ts.config.js && node dist/index.js",
+    "webpack-js": "webpack --config webpack.js.config.js && node dist/index.js",
+    "parcel-ts": "parcel build src/index.ts --dist-dir dist && node dist/index.js",
+    "parcel-js": "parcel build src/index.js --dist-dir dist && node dist/index.js",
+    "rollup-ts": "rollup -i src/index.ts -o dist/index.js -f iife -p @rollup/plugin-commonjs && node dist/index.js",
+    "rollup-js": "rollup -i src/index.js -o dist/index.js -f iife -p @rollup/plugin-commonjs && node dist/index.js",
+    "node-js": "node src/index.js"
+  },
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^25.0.7",
+    "esbuild": "^0.21.1",
+    "parcel": "^2.12.0",
+    "rollup": "^4.17.2",
+    "ts-loader": "^9.5.1",
+    "webpack": "^5.91.0",
+    "webpack-cli": "^5.1.4"
+  }
+}
